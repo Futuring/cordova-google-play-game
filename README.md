@@ -1,8 +1,6 @@
 cordova-google-play-game
 ========================
 
-*IMPORTANT NOTICE:* This library is nolonger actively maintained as I'm not working with Cordova anymore. Better to find abother library that does the job better.
-
 Cordova Plugin For Google Play Game Service
 
 ### Live demo
@@ -22,7 +20,7 @@ Understand about **Leaderboard** and **Achievement**. Setting up your game in Go
 ## Install
 
 ```
-cordova plugin add https://github.com/ptgamr/cordova-google-play-game.git --variable APP_ID=you_app_id_here
+cordova plugin add https://github.com/Futuring/cordova-google-play-game.git --variable APP_ID=you_app_id_here
 ```
 
 ## Usage
