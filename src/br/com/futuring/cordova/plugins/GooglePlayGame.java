@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.a42.cordova.plugins;
+package br.com.futuring.cordova.plugins;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -32,7 +32,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 
-import com.a42.cordova.plugins.GameHelper.GameHelperListener;
+import br.com.futuring.cordova.plugins.GameHelper.GameHelperListener;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.games.Games;
@@ -40,7 +40,7 @@ import com.google.android.gms.games.Player;
 
 public class GooglePlayGame extends CordovaPlugin implements GameHelperListener {
 
-    private static final String LOGTAG = "a42-CordovaGooglePlayGame";
+    private static final String LOGTAG = "futuring-CordovaGooglePlayGame";
 
     private static final String ACTION_AUTH = "auth";
     private static final String ACTION_SIGN_OUT = "signOut";

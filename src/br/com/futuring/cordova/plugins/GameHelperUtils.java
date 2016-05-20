@@ -1,5 +1,4 @@
-package com.a42.cordova.plugins;
-
+package br.com.futuring.cordova.plugins;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

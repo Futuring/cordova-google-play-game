@@ -1,4 +1,4 @@
-package com.a42.cordova.plugins;
+package br.com.futuring.cordova.plugins;
 /*
  * Copyright (C) 2013 Google Inc.
  *
@@ -14,8 +14,6 @@ package com.a42.cordova.plugins;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
 
 import java.util.ArrayList;
 
