@@ -30,21 +30,21 @@ cordova plugin add https://github.com/Futuring/cordova-google-play-game.git --va
 #### Sign in
 You should do this as soon as your `deviceready` event has been fired. The plugin handles the various auth scenarios for you.
 
-```
+```js
 googleplaygame.auth();
 ```
 
 #### Sign out
 You should provde the option for users to sign out
 
-```
+```js
 googleplaygame.signout();
 ```
 
 #### Auth status
 To check if the user is already logged in (eg. to determine weather to show the Log In or Log Out button), use the following
 
-```
+```js
 googleplaygame.isSignedIn(function (result) {
 	// ‘result’ is a JSON object with a single boolean property of ‘isSignedIn’
 	// {
@@ -58,7 +58,7 @@ googleplaygame.isSignedIn(function (result) {
 #### Player Information
 Fetch the currently authenticated player's data.
 
-```
+```js
 googleplaygame.showPlayer(function (playerData) {
 	...
 	console.log(“Authenticated as ”+playerData['displayName']);
@@ -72,7 +72,7 @@ googleplaygame.showPlayer(function (playerData) {
 
 Ensure you have had a successful callback from `googleplaygame.auth()` first before attempting to submit a score. You should also have set up your leaderboard(s) in Google Play Game Console and use the leaderboard identifier assigned there as the `leaderboardId`.
 
-```
+```js
 var data = {
     score: 10,
     leaderboardId: "board1"
@@ -84,7 +84,7 @@ googleplaygame.submitScore(data);
 
 Launches the native Play Games leaderboard view controller to show all the leaderboards.
 
-```
+```js
 googleplaygame.showAllLeaderboards();
 ```
 
@@ -92,7 +92,7 @@ googleplaygame.showAllLeaderboards();
 
 Launches directly into the specified leaderboard:
 
-```
+```js
 var data = {
 	leaderboardId: "board1"
 };
@@ -104,7 +104,7 @@ googleplaygame.showLeaderboard(leaderboardId);
 
 Unlocks the specified achievement:
 
-```
+```js
 var data = {
 	achievementId: "achievementId1"
 };
@@ -116,7 +116,7 @@ googleplaygame.unlockAchievement(data);
 
 Increments the specified incremental achievement by the provided numSteps:
 
-```
+```js
 var data = {	
 	achievementId: "achievementId1",
 	numSteps: 1
@@ -129,7 +129,7 @@ googleplaygame.incrementAchievement(data);
 
 Launches the native Play Games achievements view controller to show the user’s achievements.
 
-```
+```js
 googleplaygame.showAchievements();
 ```
 
@@ -141,7 +141,7 @@ For all methods, you can optionally provide custom success/failure callbacks.
 
 For example:
 
-```
+```js
 var successfullyLoggedIn = function () { ... };
 var failedToLogin = function () { ... };
 googleplaygame.auth(successfullyLoggedIn, failedToLogin);
