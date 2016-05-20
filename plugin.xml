@@ -2,16 +2,16 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	id="com.a42.cordova.googleplaygame"
-	version="2.0.4">
-      
+	id="br.com.futuring.cordova.googleplaygame"
+	version="3.0.0">
+
     <name>GooglePlayGame</name>
 	<description>Google Play Game Service Cordova Plugin</description>
-	<author>Anh Trinh</author>
+	<author>Anh Trinh and Jean Lucas de Carvalho</author>
 	<license>MIT</license>
 	<keywords>google, play, game, cordova</keywords>
-    <repo>https://github.com/ptgamr/cordova-google-play-game.git</repo>
-    <issue>https://github.com/ptgamr/cordova-google-play-game/issues</issue>
+    <repo>https://github.com/Futuring/cordova-google-play-game.git</repo>
+    <issue>https://github.com/Futuring/cordova-google-play-game/issues</issue>
 
 	<engines>
 	    <engine name="cordova" version=">=3.0" />
@@ -29,26 +29,28 @@
                 <param name="android-package" value="com.a42.cordova.plugins.GooglePlayGame"/>
             </feature>
         </config-file>
-        
+
         <config-file target="res/values/strings.xml" parent="/resources">
             <string name="app_id">$APP_ID</string>
         </config-file>
-        
-        <dependency id="com.google.playservices" />
-        <dependency id="android.support.v4" />
-        
+
+        <framework src="com.google.android.gms:play-services-games:+" />
+        <framework src="com.google.android.gms:play-services-plus:+" />
+        <framework src="com.google.android.gms:play-services-drive:+" />
+        <dependency id="android.support.v4" /> 
+
         <source-file src="src/com/a42/cordova/plugins/GooglePlayGame.java" target-dir="src/com/a42/cordova/plugins/" />
         <source-file src="src/com/a42/cordova/plugins/GoogleGameService.java" target-dir="src/com/a42/cordova/plugins/" />
         <source-file src="src/com/a42/cordova/plugins/BaseGameActivity.java" target-dir="src/com/a42/cordova/plugins/" />
         <source-file src="src/com/a42/cordova/plugins/GameHelper.java" target-dir="src/com/a42/cordova/plugins/" />
         <source-file src="src/com/a42/cordova/plugins/GameHelperUtils.java" target-dir="src/com/a42/cordova/plugins/" />
-        
+
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <meta-data
               android:name="com.google.android.gms.games.APP_ID"
               android:value="@string/app_id" />
         </config-file>
-        
+
         <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.INTERNET"/>
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
