@@ -48,10 +48,10 @@ To check if the user is already logged in (eg. to determine weather to show the 
 googleplaygame.isSignedIn(function (result) {
 	// ‘result’ is a JSON object with a single boolean property of ‘isSignedIn’
 	// {
-	// 		“isSignedIn” : true
+	// 		"isSignedIn" : true
 	// }
 	
-	console.log(“Do something with result.isSignedIn”);
+	console.log("Do something with result.isSignedIn");
 });
 ```
 
@@ -61,7 +61,7 @@ Fetch the currently authenticated player's data.
 ```js
 googleplaygame.showPlayer(function (playerData) {
 	...
-	console.log(“Authenticated as ”+playerData['displayName']);
+	console.log("Authenticated as " + playerData['displayName']);
 });
 ```
 
